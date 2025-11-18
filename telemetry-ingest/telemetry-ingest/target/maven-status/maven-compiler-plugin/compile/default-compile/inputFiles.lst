@@ -1,0 +1,7 @@
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\TelemetryIngestApplication.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\model\Telemetry.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\repository\TelemetryRepository.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\model\JsonConverter.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\config\KafkaConsumerConfig.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\controller\TelemetryController.java
+C:\wmn-project\telemetry-ingest\telemetry-ingest\src\main\java\com\wmn\telemetry\consumer\TelemetryKafkaConsumer.java

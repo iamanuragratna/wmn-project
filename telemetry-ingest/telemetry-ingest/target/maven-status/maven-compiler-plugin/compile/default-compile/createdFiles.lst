@@ -1,0 +1,8 @@
+com\wmn\telemetry\model\JsonConverter$1.class
+com\wmn\telemetry\model\JsonConverter.class
+com\wmn\telemetry\consumer\TelemetryKafkaConsumer.class
+com\wmn\telemetry\repository\TelemetryRepository.class
+com\wmn\telemetry\config\KafkaConsumerConfig.class
+com\wmn\telemetry\controller\TelemetryController.class
+com\wmn\telemetry\TelemetryIngestApplication.class
+com\wmn\telemetry\model\Telemetry.class
