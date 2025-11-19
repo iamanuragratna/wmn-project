@@ -1,0 +1,26 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        input-in-0:
+          destination: wmn.telemetry.v1
+        output-out-0:
+          destination: wmn.features.v1
+      kafka:
+        binder:
+          brokers: localhost:9092
+      function:
+        definition: input
+processor:
+  window:
+    seconds: 60
+  schedule:
+    ms: 15000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+server:
+  port: 8081
