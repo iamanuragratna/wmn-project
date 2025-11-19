@@ -1,0 +1,6 @@
+com\wmn\aggregation\model\Feature.class
+com\wmn\aggregation\TelemetryAggregationApplication.class
+com\wmn\aggregation\model\Telemetry.class
+com\wmn\aggregation\scheduler\AggregationScheduler.class
+com\wmn\aggregation\consumer\TelemetryConsumer.class
+com\wmn\aggregation\service\AggregationService.class
