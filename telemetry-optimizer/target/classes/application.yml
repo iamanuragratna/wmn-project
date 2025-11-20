@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: telemetry-optimizer
+
+server:
+  port: 8084
+
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  topic:
+    forecasts: wmn.forecasts.v1
