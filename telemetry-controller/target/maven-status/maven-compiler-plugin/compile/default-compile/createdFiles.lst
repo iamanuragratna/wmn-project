@@ -1,0 +1,5 @@
+com\wmn\controller\dto\Command.class
+com\wmn\controller\TelemetryControllerApplication.class
+com\wmn\controller\dto\ChannelConfig.class
+com\wmn\controller\ControllerService.class
+com\wmn\controller\config\KafkaConfig.class

@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: telemetry-controller
+
+server:
+  port: 8085
+
+kafka:
+  bootstrap:
+    servers: localhost:9092
+  topic:
+    chconfigs: wmn.chconfigs.v1

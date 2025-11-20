@@ -1,0 +1,5 @@
+com\wmn\optimizer\dto\Forecast.class
+com\wmn\optimizer\OptimizerService.class
+com\wmn\optimizer\config\KafkaConfig.class
+com\wmn\optimizer\dto\ChannelConfig.class
+com\wmn\optimizer\TelemetryOptimizerApplication.class
