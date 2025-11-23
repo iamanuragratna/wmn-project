@@ -1,0 +1,17 @@
+{
+  "name": "telemetry-controller-websocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "stomp-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@stomp/stompjs": "^7.2.1",
+    "sockjs-client": "^1.6.1"
+  }
+}

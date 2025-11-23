@@ -1,0 +1,6 @@
+<div style="display:flex;gap:8px">
+  <input [(ngModel)]="nodeId" class="input" placeholder="nodeId"/>
+  <input [(ngModel)]="channel" class="input" placeholder="channel"/>
+  <button class="button" (click)="doSend()">Send</button>
+</div>
+<div class="small" style="margin-top:8px">POST /api/controller/commands</div>

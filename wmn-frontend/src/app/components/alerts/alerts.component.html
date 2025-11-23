@@ -1,0 +1,2 @@
+<div *ngIf="getAlerts().length===0" class="small">No alerts.</div>
+<div *ngFor="let a of getAlerts()" class="list-item"><strong>{{a.id}}</strong> {{a.msg}}</div>

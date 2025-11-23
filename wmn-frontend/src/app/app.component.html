@@ -1,0 +1,59 @@
+<!-- src/app/app.component.html -->
+<div class="app-shell">
+  <div class="app-header">
+    <h3 style="margin:0; font-size:16px;">WMN Telemetry Control Panel</h3>
+  </div>
+
+  <div class="app-body">
+    <div class="app-grid">
+      <!-- left column -->
+      <div>
+        <div class="card">
+          <!-- existing node list component -->
+          <app-node-list [nodes]="nodes" (sendCommand)="sendManualCommand($event.nodeId, $event.channel)"></app-node-list>
+        </div>
+      </div>
+
+      <!-- center column -->
+      <div>
+        <div class="card">
+          <app-telemetry-chart [telemetry]="telemetry"></app-telemetry-chart>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card">
+          <app-forecast-chart [forecasts]="forecasts"></app-forecast-chart>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card">
+          <app-plan-view [plans]="plans"></app-plan-view>
+        </div>
+      </div>
+
+      <!-- right column -->
+      <div>
+        <div class="card">
+          <app-command-history [commands]="commands"></app-command-history>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card">
+          <app-admin-panel (send)="sendManualCommand($event.nodeId, $event.channel)"></app-admin-panel>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card">
+          <app-alerts [telemetry]="telemetry"></app-alerts>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card">
+          <app-observability></app-observability>
+        </div>
+        <div style="height:12px"></div>
+        <div class="card logs">
+          <div style="font-weight:600; margin-bottom:6px;">Logs</div>
+          <div class="content-scroll">
+            <div *ngFor="let l of logs">{{ l }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

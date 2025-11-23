@@ -11,3 +11,12 @@ kafka:
     servers: localhost:9092
   topic:
     chconfigs: wmn.chconfigs.v1
+    features: wmn.features.v1
+    forecasts: wmn.forecasts.v1
+    plans: wmn.chconfigs.v1
+    commands: wmn.commands.v1
+
+app:
+  websocket:
+    stomp-endpoint: /ws/telemetry
+    destination-prefix: /topic/telemetry
