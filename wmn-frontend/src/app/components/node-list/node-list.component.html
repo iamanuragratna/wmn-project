@@ -1,0 +1,24 @@
+<div *ngIf="!displayNodes || displayNodes.length === 0" class="small">No nodes yet (waiting for telemetry)</div>
+
+<div *ngFor="let node of displayNodes">
+  <div class="list-item">
+    <div class="row">
+      <div>
+        <strong>{{node.id}}</strong>
+        <div class="small">Last seen: {{node.lastSeen || '—'}}</div>
+        <div class="small">RSSI: {{node.lastRssi ?? '—'}}</div>
+        <div class="small">Busy%: {{node.channelBusy != null ? (node.channelBusy | number:'1.2-2') : '—'}}</div>
+        <div class="small">Clients: {{node.clients ?? 0}}</div>
+      </div>
+      <div class="actions">
+        <button (click)="selected = (selected===node.id ? null : node.id)" class="button">Details</button>
+        <button class="button" (click)="onSend(node.id, node.suggestedChannel || 6)">Set Ch</button>
+      </div>
+    </div>
+
+    <div *ngIf="selected===node.id" class="small" style="margin-top:8px">
+      <!-- show the raw node object from the source 'nodes' so you still see full telemetry -->
+      <pre>{{ nodes[node.id] | json }}</pre>
+    </div>
+  </div>
+</div>

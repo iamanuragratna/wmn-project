@@ -1,0 +1,6 @@
+<div *ngIf="!plans || plans.length===0" class="small">No optimizer plans.</div>
+<div *ngFor="let p of plans" class="list-item">
+  <div><strong>{{p.nodeId}}</strong> → {{p.channel}} <span class="small">({{p.reason}})</span></div>
+  <div class="small">Status: {{p.status}}</div>
+  <div class="small">At: {{p.ts}}</div>
+</div>

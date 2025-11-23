@@ -1,5 +1,13 @@
 com\wmn\controller\dto\Command.class
-com\wmn\controller\TelemetryControllerApplication.class
-com\wmn\controller\dto\ChannelConfig.class
+com\wmn\controller\dto\CommandStatus.class
+com\wmn\controller\api\AdminController.class
+com\wmn\controller\dto\ForecastUpdate.class
 com\wmn\controller\ControllerService.class
 com\wmn\controller\config\KafkaConfig.class
+com\wmn\controller\TelemetryControllerApplication.class
+com\wmn\controller\dto\ChannelConfig.class
+com\wmn\controller\dto\OptimizerPlan.class
+com\wmn\controller\config\WebSocketConfig.class
+com\wmn\controller\dto\FeatureUpdate.class
+com\wmn\controller\bridge\KafkaToWebSocketBridge.class
+com\wmn\controller\dto\EventMessage.class

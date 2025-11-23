@@ -1,0 +1,7 @@
+<div *ngIf="!commands || commands.length===0" class="small">No commands yet.</div>
+<div class="small-list">
+<div *ngFor="let c of commands" class="list-item">
+  <div><strong>{{c.nodeId}}</strong> {{c.command}} → {{c.payload}}</div>
+  <div class="small">ts: {{c.ts}}</div>
+</div>
+</div>

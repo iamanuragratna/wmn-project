@@ -1,5 +1,13 @@
 C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\TelemetryControllerApplication.java
-C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\ControllerService.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\api\AdminController.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\bridge\KafkaToWebSocketBridge.java
 C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\Command.java
 C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\ChannelConfig.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\EventMessage.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\config\WebSocketConfig.java
 C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\config\KafkaConfig.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\ControllerService.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\CommandStatus.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\FeatureUpdate.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\OptimizerPlan.java
+C:\wmn-project\telemetry-controller\src\main\java\com\wmn\controller\dto\ForecastUpdate.java

@@ -1,0 +1,19 @@
+/* keep existing styles, plus constrained debug area */
+.card { padding: 8px; margin: 8px; border-radius: 6px; box-shadow: 0 0 0 1px rgba(0,0,0,0.03); }
+.card-header { font-weight: 600; margin-bottom: 8px; }
+.small { font-size: 12px; color: #444; margin-bottom: 6px; }
+
+/* Debug JSON area: limit height to avoid the page growing forever */
+pre.debug {
+  background: #0f1724;
+  color: #e6eef8;
+  padding: 8px;
+  border-radius: 4px;
+  max-height: 180px;
+  overflow: auto;
+  font-size: 11px;
+  line-height: 1.2;
+  margin: 8px 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

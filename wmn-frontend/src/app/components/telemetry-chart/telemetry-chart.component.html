@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">Telemetry Chart</div>
+
+  <div class="small">Nodes: <strong>{{ nodeIds }}</strong></div>
+
+  <div *ngIf="!telemetry || (nodeIds.length === 0)" class="small">
+    No telemetry data received yet.
+  </div>
+
+  <div *ngIf="telemetry && (nodeIds.length > 0)">
+    <label class="small">Select node</label>
+    <select (change)="selectNode($any($event.target).value)" [value]="selectedNode">
+      <option *ngFor="let id of nodeIds" [value]="id">{{ id }}</option>
+    </select>
+
+    <!-- Debug: show only the last N samples (scrollable) to avoid page growth -->
+    <pre class="debug">{{ getDebugSamples(50) }}</pre>
+
+    <div *ngIf="chartData.length === 0" class="small">
+      No plottable telemetry samples for node <strong>{{ selectedNode }}</strong>.
+    </div>
+
+    <svg *ngIf="chartData.length > 0" width="820" height="220" style="background:#fafafa;border:1px solid #eee;">
+      <!-- Busy polyline -->
+      <polyline [attr.points]="pointsBusy" fill="none" stroke="green" stroke-width="2"></polyline>
+      <!-- RSSI polyline -->
+      <polyline [attr.points]="pointsRssi" fill="none" stroke="blue" stroke-width="2"></polyline>
+
+      <!-- draw small circles for every sample so single-point is visible -->
+      <ng-container *ngFor="let p of chartData; let i = index">
+        <circle [attr.cx]="(chartData.length > 1) ? Math.round((i / (chartData.length - 1)) * 800) : 400"
+                [attr.cy]="(p.busy != null) ? (200 - (p.busy * 1.6)) : (200 - ((p.rssi != null ? p.rssi : -100 + 100) * 1.2))"
+                r="3"
+                [attr.fill]="p.__forecast ? 'orange' : 'black'"></circle>
+      </ng-container>
+
+      <!-- simple x-axis labels -->
+      <g *ngIf="chartData.length > 1">
+        <text *ngFor="let p of chartData; let i = index"
+              [attr.x]="Math.round((i / (chartData.length - 1)) * 800)"
+              [attr.y]="210" font-size="10">{{ formatTime(p.ts) }}</text>
+      </g>
+    </svg>
+  </div>
+</div>

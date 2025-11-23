@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">Forecasts</div>
+
+  <div *ngIf="!forecasts || (nodeIds.length === 0)" class="small">
+    No forecasts yet.
+  </div>
+
+  <div *ngIf="forecasts && (nodeIds.length > 0)">
+    <div class="small">Forecast nodes: <strong>{{ nodeIds.join(', ') }}</strong></div>
+
+    <div *ngFor="let id of nodeIds" class="forecast-row">
+      <div><strong>{{ id }}</strong></div>
+      <div>timestamp: {{ forecasts[id]?.timestamp ?? '—' }}</div>
+      <div>forecastBusyPercent: {{ forecasts[id]?.forecastBusyPercent ?? '—' }}</div>
+      <div>method: {{ forecasts[id]?.method ?? '—' }}</div>
+      <hr>
+    </div>
+
+    <svg width="820" height="80" *ngIf="nodeIds.length > 0" style="background:#fff;border:1px solid #eee;">
+      <ng-container *ngFor="let id of nodeIds; let i = index">
+        <circle [attr.cx]="(i+1) * (800 / (nodeIds.length + 1))" [attr.cy]="40"
+                [attr.r]="6" fill="purple"></circle>
+        <text [attr.x]="(i+1) * (800 / (nodeIds.length + 1)) - 20" [attr.y]="60" font-size="11">
+          {{ id }} {{ forecasts[id]?.forecastBusyPercent ?? '—' }}%
+        </text>
+      </ng-container>
+    </svg>
+  </div>
+</div>
