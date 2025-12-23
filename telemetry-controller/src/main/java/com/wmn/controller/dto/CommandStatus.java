@@ -6,6 +6,7 @@ public class CommandStatus {
     public String payload;
     public String status; // e.g., "ACK", "APPLIED", "FAILED"
     public String timestamp;
+    private String configVersion;
 
     public String getNodeId() {
         return nodeId;
@@ -45,5 +46,13 @@ public class CommandStatus {
 
     public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getConfigVersion() {
+        return configVersion;
+    }
+
+    public void setConfigVersion(String configVersion) {
+        this.configVersion = configVersion;
     }
 }

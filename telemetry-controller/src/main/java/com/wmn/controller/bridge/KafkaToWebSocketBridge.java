@@ -93,8 +93,8 @@ public class KafkaToWebSocketBridge {
             int partition = rec == null ? -1 : rec.partition();
             long offset = rec == null ? -1L : rec.offset();
 
-            log.info("Received record: topic={} partition={} offset={} key={} valueLength={}",
-                    topic, partition, offset, key, raw == null ? 0 : raw.length());
+           /* log.info("Received record: topic={} partition={} offset={} key={} valueLength={}",
+                    topic, partition, offset, key, raw == null ? 0 : raw.length()); */
 
             if (raw != null) {
                 final int PREVIEW_LEN = 400;
@@ -114,8 +114,8 @@ public class KafkaToWebSocketBridge {
                 T payload = mapper.readValue(raw, targetClass);
                 EventMessage ev = new EventMessage(successEventType, payload);
                 messagingTemplate.convertAndSend(wsDestination, ev);
-                log.info("Parsed {} and forwarded to websocket (topic={} offset={})",
-                        targetClass.getSimpleName(), topic, offset);
+                /*log.info("Parsed {} and forwarded to websocket (topic={} offset={})",
+                        targetClass.getSimpleName(), topic, offset); */
             } catch (Exception mapEx) {
                 log.error("Failed to parse JSON to {} (topic={} offset={}): {}. Sending raw to websocket.",
                         targetClass.getSimpleName(), topic, offset, mapEx.toString());

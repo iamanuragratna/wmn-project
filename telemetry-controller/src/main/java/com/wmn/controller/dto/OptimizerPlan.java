@@ -2,7 +2,7 @@ package com.wmn.controller.dto;
 
 public class OptimizerPlan {
     public String nodeId;
-    public int channel;
+    public Integer channel;
     public String reason;
 
     public String getNodeId() {
@@ -13,7 +13,7 @@ public class OptimizerPlan {
         this.nodeId = nodeId;
     }
 
-    public int getChannel() {
+    public Integer getChannel() {
         return channel;
     }
 

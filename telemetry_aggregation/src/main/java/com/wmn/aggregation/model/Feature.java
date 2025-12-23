@@ -12,8 +12,11 @@ public class Feature {
     public double avgRssi;
     public long sumTxBytes;
     public String lastSeen;
+    public Integer channel;
+    public Boolean synthetic;
+    public Double avgNumClients;
 
     public String toString() {
-        return "Feature[nodeId="+nodeId+",samples="+sampleCount+"]";
+        return "Feature[nodeId="+nodeId+",samples="+sampleCount+",avgNumClients="+avgNumClients+"]";
     }
 }

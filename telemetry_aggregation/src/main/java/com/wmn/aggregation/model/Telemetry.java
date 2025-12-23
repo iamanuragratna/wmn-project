@@ -18,8 +18,9 @@ public class Telemetry {
     public Integer numClients;
     public Double channelBusyPercent;
     public List<Map<String,Object>> interferenceScan;
+    public String sampleSource;
 
     public String toString() {
-        return "Telemetry{nodeId="+nodeId+", ts="+timestamp+", rssi="+rssi+", busy="+channelBusyPercent+"}";
+        return "Telemetry{nodeId="+nodeId+", ts="+timestamp+", rssi="+rssi+", busy="+channelBusyPercent+", interferenceScan=" + interferenceScan +"}";
     }
 }

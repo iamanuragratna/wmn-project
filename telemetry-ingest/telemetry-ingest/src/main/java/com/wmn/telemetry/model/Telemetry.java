@@ -33,6 +33,8 @@ public class Telemetry {
     private Integer numClients;
     private Double channelBusyPercent;
 
+    private String sampleSource;
+
     // Use AttributeConverter to serialize/deserialize the interferenceScan list.
     // Column type: text (stores JSON string). If you later want jsonb, see SQL below.
     @JsonProperty("interferenceScan")
@@ -68,4 +70,12 @@ public class Telemetry {
     public void setChannelBusyPercent(Double channelBusyPercent) { this.channelBusyPercent = channelBusyPercent; }
     public List<Map<String, Object>> getInterference() { return interference; }
     public void setInterference(List<Map<String, Object>> interference) { this.interference = interference; }
+
+    public String getSampleSource() {
+        return sampleSource;
+    }
+
+    public void setSampleSource(String sampleSource) {
+        this.sampleSource = sampleSource;
+    }
 }

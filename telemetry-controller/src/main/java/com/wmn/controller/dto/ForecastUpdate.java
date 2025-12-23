@@ -7,6 +7,12 @@ public class ForecastUpdate {
     public String method;
     public int windowSeconds;
 
+    private double confidence;
+    public long sampleCount;
+    public Integer channel;
+    public Boolean synthetic;
+    public Double avgNumClients;
+
     public String getNodeId() {
         return nodeId;
     }
@@ -45,5 +51,45 @@ public class ForecastUpdate {
 
     public void setWindowSeconds(int windowSeconds) {
         this.windowSeconds = windowSeconds;
+    }
+
+    public double getConfidence() {
+        return confidence;
+    }
+
+    public void setConfidence(double confidence) {
+        this.confidence = confidence;
+    }
+
+    public long getSampleCount() {
+        return sampleCount;
+    }
+
+    public void setSampleCount(long sampleCount) {
+        this.sampleCount = sampleCount;
+    }
+
+    public Integer getChannel() {
+        return channel;
+    }
+
+    public void setChannel(Integer channel) {
+        this.channel = channel;
+    }
+
+    public Boolean getSynthetic() {
+        return synthetic;
+    }
+
+    public void setSynthetic(Boolean synthetic) {
+        this.synthetic = synthetic;
+    }
+
+    public Double getAvgNumClients() {
+        return avgNumClients;
+    }
+
+    public void setAvgNumClients(Double avgNumClients) {
+        this.avgNumClients = avgNumClients;
     }
 }

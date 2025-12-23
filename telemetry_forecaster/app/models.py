@@ -13,3 +13,6 @@ class FeatureModel(BaseModel):
     avgRssi: Optional[float] = 0.0
     sumTxBytes: Optional[int] = 0
     lastSeen: Optional[str] = None
+    channel: Optional[int] = 0
+    synthetic: Optional[bool] = False
+    avgNumClients: Optional[float] = 0.0

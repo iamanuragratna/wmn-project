@@ -12,6 +12,10 @@ public class FeatureUpdate {
     public double avgRssi;
     public long sumTxBytes;
     public String lastSeen;
+    public Integer channel;
+
+    public Boolean synthetic;
+    public Double avgNumClients;
 
     public String getNodeId() {
         return nodeId;
@@ -99,5 +103,29 @@ public class FeatureUpdate {
 
     public void setLastSeen(String lastSeen) {
         this.lastSeen = lastSeen;
+    }
+
+    public Integer getChannel() {
+        return channel;
+    }
+
+    public void setChannel(Integer channel) {
+        this.channel = channel;
+    }
+
+    public Boolean getSynthetic() {
+        return synthetic;
+    }
+
+    public void setSynthetic(Boolean synthetic) {
+        this.synthetic = synthetic;
+    }
+
+    public Double getAvgNumClients() {
+        return avgNumClients;
+    }
+
+    public void setAvgNumClients(Double avgNumClients) {
+        this.avgNumClients = avgNumClients;
     }
 }
